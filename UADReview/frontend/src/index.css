@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* default mode (terang) */
+body {
+    background-color: white;
+    color: black; /* warna font gelap untuk mode terang */
+  }
+  
+  header, .content {
+    background-color: white;
+    color: black; /* font gelap untuk header dan konten */
+  }
+  
+  /* dark mode */
+  body.dark {
+    background-color: #101d37;
+    color: rgb(131, 172, 229); /* warna font terang untuk mode gelap */
+  }
+  
+  body.dark header, body.dark .content {
+    background-color: #0f1520;
+    color: rgb(184, 227, 234); /* font terang untuk header dan konten */
+  }
+  
+  button {
+    background-color: hwb(209 7% 75%);
+    color: rgb(116, 156, 189);
+  }
+  
+  button:hover {
+    background-color: #1c3959;
+  }
+  
+  .text-gradient {
+    background: linear-gradient(to right, #ff7e5f, #feb47b, #6a11cb, #2575fc, #b2a4ff);
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    font-weight: bold;
+  }
+  
+  @keyframes gradientColor {
+    0% {
+      background: linear-gradient(to right, #ff7e5f, #feb47b, #6a11cb, #2575fc, #b2a4ff);
+    }
+    100% {
+      background: linear-gradient(to right, #feb47b, #ff7e5f, #2575fc, #b2a4ff, #6a11cb);
+    }
+  }
+  
